@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "pre-build",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -12,6 +12,21 @@
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Unrestricted",
+                "-NoProfile",
+                "-File",
+                "${cwd}/merge.ps1"
+            ],
+            "dependsOn": [
+                "pre-build"
+            ],
+            "problemMatcher": []
         },
         {
             "label": "publish",
