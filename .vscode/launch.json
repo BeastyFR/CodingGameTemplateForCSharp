@@ -8,9 +8,9 @@
 			"name": ".NET Core Launch (console)",
 			"type": "coreclr",
 			"request": "launch",
-			"preLaunchTask": "build",
+			"preLaunchTask": "publish-all",
 			// If you have changed target frameworks, make sure to update the program path.
-			"program": "${workspaceFolder}/app/bin/Debug/netcoreapp3.1/app.dll",
+			"program": "${workspaceFolder}/GLSimulator/bin/Debug/netcoreapp3.1/GLSimulator.dll",
 			"args": [],
 			"cwd": "${workspaceFolder}/app",
 			// For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console

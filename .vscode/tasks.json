@@ -29,6 +29,33 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "build-all",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"${workspaceFolder}/GLSimulator/GLSimulator.csproj",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"dependsOn": [
+				"pre-build"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "publish-all",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"publish",
+				"${workspaceFolder}/GLSimulator/GLSimulator.csproj",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
 			"label": "publish",
 			"command": "dotnet",
 			"type": "process",
